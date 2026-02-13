@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>메인화면</h1>
+    <p><a href="sub.html" target="_self"> 서브화면</a></p>
+    
+    <audio id="flipSound">
+        <source src="https://dino-21.github.io/0213_sound/sound/paper.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        window.onload = function() {
+            const sound = document.getElementById('flipSound');
+            
+            // 사용자의 클릭이나 상호작용 후 페이지가 이동했다면 재생될 확률이 높습니다.
+            sound.play().catch(function(error) {
+                console.log("자동 재생 정책에 의해 차단되었습니다:", error);
+            });
+        };
+    </script>
+</body>
+</html>
